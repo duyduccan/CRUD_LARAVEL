@@ -30,3 +30,7 @@ Route::prefix("admin")->group(function(){
     // sửa bản ghi mới
     Route::post('/products/edit/{id}','Backend\ProductController@update');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
